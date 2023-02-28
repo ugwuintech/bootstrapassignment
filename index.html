@@ -171,22 +171,46 @@
               </ul>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <button class="nav-link btn btn-success" href="contact.html">
+                Find Agents
+              </button>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn get-started" type="submit">Search</button>
+          <form class="d-flex">
+            <button class="btn btn-success get-started">Login</button>
           </form>
         </div>
       </div>
     </nav>
     <!-- NAVIGATION BAR ENDS -->
+    <!-- ____________________________________________________________________________ -->
+
+    <!-- SETTINGS BUTTON -->
+    <div class="settings float-end d-flex" id="settings-tray">
+      <i
+        class="fa-sharp fa-solid fa-gear main-icon"
+        style="color: rgb(245, 241, 241)"
+        onclick="openTray()"
+        id="lightTheme"
+      ></i>
+      <i
+        class="fa-solid fa-moon hidden-icons"
+        style="color: white"
+        id="redTheme"
+        onclick="redTheme()"
+      ></i>
+      <i
+        class="fa-sharp fa-solid fa-sun hidden-icons"
+        style="color: white"
+        id="yellowTheme"
+        onclick="yellowTheme()"
+      ></i>
+      <i
+        class="fa-solid fa-xmark hidden-icons"
+        id="closeBtn"
+        onclick="closeTray()"
+      ></i>
+    </div>
     <!-- ____________________________________________________________________________ -->
 
     <!-- CAROUSEL SLIDES START-->
@@ -1696,9 +1720,7 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-6 col-md-6">
-              <p class="copy">
-                © 2022 <a href="#">Theme Vessel.</a> All Rights Reserved.
-              </p>
+              <p class="copy">&copy; 2022 <a href="#">Benzhome_ng</a></p>
             </div>
             <div class="col-lg-6 col-md-6">
               <div class="social-media">
@@ -1743,5 +1765,7 @@
       src="https://kit.fontawesome.com/64e06a0ed2.js"
       crossorigin="anonymous"
     ></script>
+
+    <script src="./main.js"></script>
   </body>
 </html>
