@@ -35,27 +35,30 @@
   </head>
   <body>
     <!-- SETTINGS BUTTON -->
-    <div class="settings float-end d-flex" id="settings-tray">
+    <div class="settings float-end d-flex" id="tray">
       <i
         class="fa-sharp fa-solid fa-gear main-icon"
         style="color: rgb(245, 241, 241)"
         onclick="openTray()"
-        id="lightTheme"
+        id="themeSettings"
       ></i>
-      <i
-        class="fa-solid fa-moon hidden-icons"
-        style="color: white"
-        id="redTheme"
-        onclick="redTheme()"
-      ></i>
+
       <i
         class="fa-sharp fa-solid fa-sun hidden-icons"
         style="color: white"
-        id="yellowTheme"
-        onclick="yellowTheme()"
+        id="lightTheme"
+        onclick="lightTheme()"
       ></i>
       <i
+        class="fa-solid fa-moon hidden-icons"
+        style="color: #fdfdf2"
+        id="darkTheme"
+        onclick="darkTheme()"
+      ></i>
+
+      <i
         class="fa-solid fa-xmark hidden-icons"
+        style="color: white"
         id="closeBtn"
         onclick="closeTray()"
       ></i>
@@ -64,11 +67,13 @@
 
     <div class="content">
       <!-- NAVIGATION BAR STARTS -->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-header">
+      <nav class="navbar navbar-expand-lg navbar-light-mode sticky-header">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#"
-            ><img src="images/benzhomenglogo.png" alt="logo"
-          /></a>
+          <div class="logo">
+            <a class="navbar-brand" href="#"
+              ><img src="images/benzhomenglogo.png" alt="logo" id="logo"
+            /></a>
+          </div>
           <button
             class="navbar-toggler"
             type="button"
@@ -83,10 +88,16 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="#"
+                  id="nav-link1"
+                  >Home</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About Us</a>
+                <a class="nav-link" href="#" id="nav-link2">About Us</a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -174,7 +185,7 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Blog</a>
+                <a class="nav-link" href="#" id="nav-link4">Blog</a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -184,6 +195,7 @@
                   data-bs-toggle="dropdown"
                   aria-haspopup="true"
                   aria-expanded="false"
+                  id="nav-link5"
                 >
                   Shop
                 </a>
